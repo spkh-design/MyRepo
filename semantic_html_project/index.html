@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая сетка – Блог о путешествиях</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Путешествия по миру",
+      "description": "Блог о путешествиях: откройте для себя самые удивительные места планеты",
+      "url": "https://example.com/",
+      "inLanguage": "ru-RU",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Путешествия по миру",
+        "url": "https://example.com/"
+      }
+    }
+    </script>
+  
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Путешествие по Италии",
+      "datePublished": "2024-03-15",
+      "inLanguage": "ru-RU",
+      "author": {
+        "@type": "Person",
+        "name": "Иван Петров",
+        "email": "ivan@example.com"
+      },
+      "image": "https://via.placeholder.com/600x400",
+      "articleSection": "Европа",
+      "about": {
+        "@type": "Place",
+        "name": "Италия"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Япония: традиции и технологии",
+      "inLanguage": "ru-RU",
+      "articleSection": "Азия",
+      "about": {
+        "@type": "Place",
+        "name": "Япония"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Путешествия по миру</h1>
+        <p>Откройте для себя самые удивительные места планеты</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#europe">Европа</a></li>
+            <li><a href="#asia">Азия</a></li>
+            <li><a href="#americe">Америка</a></li>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#contact">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article id="europe" itemscope itemtype="https://schema.org/BlogPosting">
+
+            <header>
+                <h2 itemprop="headline">Путешествие по Италии</h2>
+                <time datetime="2024-03-15" itemprop="datePublished">15 марта 2024</time>
+            </header>
+
+            <section>
+                <h3>Рим – вечный город</h3>
+                <p itemprop="articleBody">Рим поражает своими древними памятниками и богатой историей...</p>
+                <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="https://via.placeholder.com/600x400" alt="Колизей в Риме" itemprop="url">
+                    <figcaption itemprop="caption">Величественный Колизей – символ Рима</figcaption>
+                </figure>
+            </section>
+
+            <section>
+                <h3>Венеция – город на воде</h3>
+                <p itemprop="articleBody">Уникальная архитектура и романтические каналы делают Венецию неповторимой...</p>
+            </section>
+
+            <footer>
+                <p itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    Автор: <span itemprop="name">Иван Петров</span>
+                </p>
+                <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    Email: <span itemprop="email">ivan@example.com</span>
+                </address>
+            </footer>
+        </article>
+
+        <article id="asia" itemscope itemtype="https://schema.org/BlogPosting">
+            <h2 itemprop="headline">Япония: традиции и технологии</h2>
+            <p itemprop="articleBody">Откройте удивительный мир японской культуры...</p>
+            <details>
+                <summary>Читать далее о Токио</summary>
+                <p>Токио сочетает в себе древние храмы и неоновые огни...</p>
+            </details>
+        </article>
+
+        <article id="about" itemscope itemtype="https://schema.org/AboutPage">
+            <h2 itemprop="name">О нашем блоге</h2>
+            <p itemprop="description">Мы делимся настоящими историями путешественников...</p>
+        </article>
+    </main>
+
+    <aside>
+        <h3>Популярные направления</h3>
+        <ul>
+            <li><a href="#france">Франция</a></li>
+            <li><a href="#japan">Япония</a></li>
+            <li><a href="#usa">США</a></li>
+        </ul>
+    </aside>
+
+    <section itemscope itemtype="https://schema.org/WebPageElement">
+        <h2 itemprop="name">Подписка на рассылку</h2>
+        <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SubscribeAction">
+            <label for="fname">Ваше имя:</label><br>
+            <input type="text" id="fname" name="fname" value="Антон"><br>
+            <label for="email">Ваша почта:</label><br>
+            <input type="text" id="lname" name="lname" value="antons.mail@example.com"><br><br>
+            <input type="submit" value="Отправить">
+        </form>
+    </section>
+
+    <section itemscope itemtype="https://schema.org/ItemList">
+        <h2 itemprop="name">Наши туры</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Направление</th>
+                    <th>Длительность</th>
+                    <th>Стоимость</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Европа</td>
+                    <td>7 дней</td>
+                    <td>
+                        <span itemprop="price" content="3500">3.500$</span>
+                        <meta itemprop="priceCurrency" content="USD">
+                    </td>
+                </tr>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Азия</td>
+                    <td>7 дней</td>
+                    <td>
+                        <span itemprop="price" content="3000">3.000$</span>
+                        <meta itemprop="priceCurrency" content="USD">
+                    </td>
+                </tr>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Америка</td>
+                    <td>7 дней</td>
+                    <td>
+                        <span itemprop="price" content="5000">5.000$</span>
+                        <meta itemprop="priceCurrency" content="USD">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Путешествия по миру. Все права защищены.</p>
+        <nav>
+            <a href="privacy">Политика конфиденциальности</a>
+            <a href="terms">Условия использования</a>
+        </nav>
+    </footer>
+
+</body>
+</html>
