@@ -1,37 +1,68 @@
+:root {
+    --color-primary: darkblue;
+    --color-text: #2c3e50;
+    --color-muted: #666;
+    --color-bg-header: #f4f4f4;
+    --color-bg-card: white;
+    --color-border: #ddd;
+    --color-accent: #3498db;
+    --color-important: orange;
+    --color-post-text: darkred;
+    --color-intro: purple;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --radius: 5px;
+    --transition-fast: 0.3s;
+    --font-base: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-base: 16px;
+}
+
+/* Тёмная тема через переменные */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #ecf0f1;
+        --color-bg-header: #2c3e50;
+        --color-bg-card: #34495e;
+        --color-border: #4a6274;
+    }
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-base);
     line-height: 1.6;
-    color: #333;
+    color: var(--color-text);
+    font-size: var(--font-size-base);
 }
 
 h1 {
-    color: darkblue;
+    color: var(--color-primary);
 }
 
 .main-header {
-    background-color: #f4f4f4;
-    padding: 20px;
-    border-bottom: 2px solid #ccc;
+    background-color: var(--color-bg-header);
+    padding: var(--spacing-lg);
+    border-bottom: 2px solid var(--color-border);
 }
 
 .subtitle {
     font-style: italic;
-    color: #666;
+    color: var(--color-muted);
 }
 
 #site-title {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .content > article {
-    background-color: white;
-    padding: 15px;
-    margin: 10px 0;
+    background-color: var(--color-bg-card);
+    padding: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
 }
 
 .post p {
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
 
 h2 + p {
@@ -40,26 +71,50 @@ h2 + p {
 }
 
 .card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 5px;
+    border: 2px solid var(--color-accent);
+    padding: var(--spacing-md);
+    border-radius: var(--radius);
+    color: var(--color-accent); /* задаёт currentColor */
+}
+
+/* Все дочерние элементы автоматически получают цвет родителя */
+.card::before {
+    content: " *";
+    color: green;
+}
+
+.card .badge {
+    border: 1px solid currentColor;      /* рамка = цвет .card */
+    padding: 2px 6px;
+    color: inherit;                       /* наследует от .card */
+}
+
+.card a {
+    color: currentColor;                  /* ссылка = цвет .card */
+    text-decoration: underline;
+}
+
+.card svg,
+.card .icon {
+    fill: currentColor;                   /* иконки окрашиваются в цвет родителя */
+    stroke: currentColor;
 }
 
 p {
     color: black;
-    font-size: 16px;
+    font-size: var(--font-size-base);
 }
 
 .post p {
-    color: darkred;
+    color: var(--color-post-text);
 }
 
 .featured-post p {
-    color: darkred;
+    color: var(--color-post-text);
 }
 
 .featured-post .intro {
-    color: purple;
+    color: var(--color-intro);
     font-size: 18px;
 }
 
@@ -78,18 +133,7 @@ ul li {
 }
 
 .important {
-    color: orange !important
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #2c3e50;
-}
-
-.card {
-    border: 2px solid #3498db;
-    padding: inherit;
+    color: var(--color-important) !important;
 }
 
 .example {
@@ -108,7 +152,7 @@ li:nth-child(odd) {
 
 .main-header:hover {
     background-color: #e9e9e9;
-    transition: background-color 0.3s;
+    transition: background-color var(--transition-fast);
 }
 
 p::first-line {
@@ -120,7 +164,144 @@ p::first-line {
     color: gold;
 }
 
-.card::before {
-    content: " *";
-    color: green;
+/* Анимации @keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.6); }
+    50%      { transform: scale(1.03); box-shadow: 0 0 0 10px rgba(52, 152, 219, 0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes colorShift {
+    0%   { color: var(--color-accent); }
+    50%  { color: var(--color-intro); }
+    100% { color: var(--color-accent); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-6px); }
+}
+
+.main-header {
+    animation: fadeIn 0.6s ease-out both;
+}
+
+.card {
+    animation: fadeIn 0.8s ease-out both;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.card:hover {
+    animation: pulse 1.2s ease-in-out infinite;
+}
+
+.content > article {
+    animation: slideInLeft 0.6s ease-out both;
+}
+
+.subtitle {
+    animation: colorShift 4s linear infinite;
+}
+
+.important {
+    display: inline-block;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+/* Настройку для уменьшения движения */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Медиа-запросы для адаптивности */
+
+/* Планшеты */
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 15px;
+        --spacing-lg: 15px;
+        --spacing-md: 12px;
+    }
+
+    .main-header {
+        padding: var(--spacing-md);
+    }
+
+    #site-title {
+        font-size: 1.6em;
+    }
+
+    .content > article {
+        margin: var(--spacing-sm) 0;
+        padding: var(--spacing-md);
+    }
+
+    .card {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Мобильные устройства */
+@media (max-width: 480px) {
+    :root {
+        --font-size-base: 14px;
+        --spacing-lg: 12px;
+        --spacing-md: 10px;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    #site-title {
+        font-size: 1.3em;
+    }
+
+    .subtitle {
+        font-size: 0.95em;
+    }
+
+    .content > article {
+        padding: var(--spacing-sm);
+        border-radius: 0;
+    }
+
+    .card {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    h2 + p {
+        font-size: 1em;
+    }
+
+    .featured-post .intro {
+        font-size: 16px;
+    }
+}
+
+/* Большие экраны */
+@media (min-width: 1200px) {
+    :root {
+        --font-size-base: 17px;
+        --spacing-lg: 30px;
+    }
+
+    .content {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
 }
