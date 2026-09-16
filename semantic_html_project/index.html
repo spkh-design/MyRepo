@@ -3,41 +3,43 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семантическая сетка – Блог о путешествиях</title>
+    <title>СПК – Структурные подразделения колледжа</title>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Путешествия по миру",
-      "description": "Блог о путешествиях: откройте для себя самые удивительные места планеты",
+      "@type": "CollegeOrUniversity",
+      "name": "СПК",
+      "alternateName": "Структурные подразделения колледжа",
+      "description": "Сайт структурных подразделений колледжа СПК: общеобразовательные дисциплины, строительство и транспорт, сфера услуг, энергетика и многофункциональный центр прикладных квалификаций.",
       "url": "https://example.com/",
       "inLanguage": "ru-RU",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Путешествия по миру",
-        "url": "https://example.com/"
-      }
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RU",
+        "addressLocality": "Москва",
+        "streetAddress": "ул. Примерная, д. 1"
+      },
+      "telephone": "+7-495-000-00-00",
+      "email": "info@example.com"
     }
     </script>
-  
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Путешествие по Италии",
-      "datePublished": "2024-03-15",
-      "inLanguage": "ru-RU",
-      "author": {
+      "@type": "EducationalOrganization",
+      "name": "СП-1. Общеобразовательные дисциплины",
+      "description": "Структурное подразделение №1 – здесь учатся первокурсники, изучают общеобразовательные дисциплины.",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "СПК"
+      },
+      "employee": {
         "@type": "Person",
         "name": "Иван Петров",
-        "email": "ivan@example.com"
-      },
-      "image": "https://via.placeholder.com/600x400",
-      "articleSection": "Европа",
-      "about": {
-        "@type": "Place",
-        "name": "Италия"
+        "email": "ivan@example.com",
+        "jobTitle": "Заведующий отделением"
       }
     }
     </script>
@@ -45,103 +47,230 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Япония: традиции и технологии",
-      "inLanguage": "ru-RU",
-      "articleSection": "Азия",
-      "about": {
-        "@type": "Place",
-        "name": "Япония"
+      "@type": "EducationalOrganization",
+      "name": "СП-2. Отделение строительства и транспорта",
+      "description": "Структурное подразделение №2 – готовит механиков, строителей и специалистов транспортной отрасли.",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "СПК"
       }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "СП-3. Отделение сферы услуг",
+      "description": "Структурное подразделение №3 – готовит специалистов для сферы обслуживания: парикмахеров, поваров, кондитеров, специалистов по туризму и гостиничному делу.",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "СПК"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "СП-4. Энергетическое отделение",
+      "description": "Структурное подразделение №4 – готовит специалистов в области электроэнергетики, электрооборудования и энергосберегающих технологий.",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "СПК"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "СП-5. Многофункциональный центр прикладных квалификаций",
+      "description": "Структурное подразделение №5 – центр дополнительного профессионального образования, повышения квалификации и переподготовки кадров.",
+      "parentOrganization": {
+        "@type": "CollegeOrUniversity",
+        "name": "СПК"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Направления подготовки",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Course",
+            "name": "Общеобразовательные дисциплины",
+            "description": "Базовые дисциплины для первокурсников",
+            "provider": { "@type": "CollegeOrUniversity", "name": "СПК" },
+            "timeRequired": "P1Y"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Course",
+            "name": "Строительство и транспорт",
+            "description": "Подготовка механиков и строителей",
+            "provider": { "@type": "CollegeOrUniversity", "name": "СПК" },
+            "timeRequired": "P3Y"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Course",
+            "name": "Сфера услуг",
+            "description": "Подготовка специалистов сферы обслуживания",
+            "provider": { "@type": "CollegeOrUniversity", "name": "СПК" },
+            "timeRequired": "P3Y"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Course",
+            "name": "Энергетика",
+            "description": "Подготовка специалистов в области электроэнергетики",
+            "provider": { "@type": "CollegeOrUniversity", "name": "СПК" },
+            "timeRequired": "P3Y"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Course",
+            "name": "Прикладные квалификации",
+            "description": "Дополнительное профессиональное образование и повышение квалификации",
+            "provider": { "@type": "CollegeOrUniversity", "name": "СПК" }
+          }
+        }
+      ]
     }
     </script>
 </head>
 <body>
 
     <header>
-        <h1>Путешествия по миру</h1>
-        <p>Откройте для себя самые удивительные места планеты</p>
+        <h1>Добро пожаловать в СПК</h1>
+        <p>Откройте для себя самое лучшее образование</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#europe">Европа</a></li>
-            <li><a href="#asia">Азия</a></li>
-            <li><a href="#americe">Америка</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="#sd1">СП-1</a></li>
+            <li><a href="#sd2">СП-2</a></li>
+            <li><a href="#sd3">СП-3</a></li>
+            <li><a href="#sd4">СП-4</a></li>
+            <li><a href="#sd5">СП-5</a></li>
         </ul>
     </nav>
 
     <main>
-        <article id="europe" itemscope itemtype="https://schema.org/BlogPosting">
 
+        <article id="sd1" itemscope itemtype="https://schema.org/EducationalOrganization">
             <header>
-                <h2 itemprop="headline">Путешествие по Италии</h2>
-                <time datetime="2024-03-15" itemprop="datePublished">15 марта 2024</time>
+                <h2 itemprop="name">СП-1</h2>
+                <time datetime="2024-03-15" itemprop="foundingDate">15 марта 2024</time>
             </header>
 
             <section>
-                <h3>Рим – вечный город</h3>
-                <p itemprop="articleBody">Рим поражает своими древними памятниками и богатой историей...</p>
+                <h3 itemprop="department">Структурное подразделение 1. Общеобразовательные дисциплины</h3>
+                <p itemprop="description">Здесь учатся первокурсники. Подразделение отвечает за базовую подготовку: русский язык, математика, физика, информатика и другие общеобразовательные предметы.</p>
                 <figure itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="https://via.placeholder.com/600x400" alt="Колизей в Риме" itemprop="url">
-                    <figcaption itemprop="caption">Величественный Колизей – символ Рима</figcaption>
+                    <img src="https://via.placeholder.com/600x400" alt="Здание СП-1" itemprop="url">
+                    <figcaption itemprop="caption">Самое строгое подразделение из всех</figcaption>
                 </figure>
             </section>
 
             <section>
-                <h3>Венеция – город на воде</h3>
-                <p itemprop="articleBody">Уникальная архитектура и романтические каналы делают Венецию неповторимой...</p>
+                <h3>Структурное подразделение 2. Отделение строительства и транспорта</h3>
+                <p itemprop="description">Отделение для механиков, строителей и прочих специалистов технического профиля.</p>
             </section>
 
             <footer>
-                <p itemprop="author" itemscope itemtype="https://schema.org/Person">
-                    Автор: <span itemprop="name">Иван Петров</span>
+                <p itemprop="employee" itemscope itemtype="https://schema.org/Person">
+                    Заведующий: <span itemprop="name">Иван Петров</span>,
+                    <span itemprop="jobTitle">заведующий отделением</span>
                 </p>
-                <address itemprop="author" itemscope itemtype="https://schema.org/Person">
+                <address itemprop="employee" itemscope itemtype="https://schema.org/Person">
                     Email: <span itemprop="email">ivan@example.com</span>
                 </address>
             </footer>
         </article>
 
-        <article id="asia" itemscope itemtype="https://schema.org/BlogPosting">
-            <h2 itemprop="headline">Япония: традиции и технологии</h2>
-            <p itemprop="articleBody">Откройте удивительный мир японской культуры...</p>
+        <article id="sd2" itemscope itemtype="https://schema.org/EducationalOrganization">
+            <h2 itemprop="name">СП-2. Отделение строительства и транспорта</h2>
+            <p itemprop="description">Готовим механиков, строителей, специалистов по обслуживанию транспортных средств. Практика проходит на реальных объектах города.</p>
             <details>
-                <summary>Читать далее о Токио</summary>
-                <p>Токио сочетает в себе древние храмы и неоновые огни...</p>
+                <summary>Читать далее о направлении</summary>
+                <p>Студенты изучают материаловедение, инженерную графику, устройство автомобилей и основы строительства.</p>
             </details>
         </article>
 
-        <article id="about" itemscope itemtype="https://schema.org/AboutPage">
-            <h2 itemprop="name">О нашем блоге</h2>
-            <p itemprop="description">Мы делимся настоящими историями путешественников...</p>
+        <article id="sd3" itemscope itemtype="https://schema.org/EducationalOrganization">
+            <h2 itemprop="name">СП-3. Отделение сферы услуг</h2>
+            <p itemprop="description">Готовим специалистов для сферы обслуживания: парикмахеров, поваров, кондитеров, специалистов по туризму и гостиничному делу. Наши студенты проходят практику в лучших заведениях города.</p>
+            <details>
+                <summary>Читать далее о направлении</summary>
+                <p>Студенты изучают технологии приготовления пищи, основы сервиса, организацию обслуживания клиентов, санитарные нормы и правила.</p>
+            </details>
+        </article>
+
+        <article id="sd4" itemscope itemtype="https://schema.org/EducationalOrganization">
+            <h2 itemprop="name">СП-4. Энергетическое отделение</h2>
+            <p itemprop="description">Готовим специалистов в области электроэнергетики, электрооборудования и энергосберегающих технологий, IT-специалистов. Выпускники работают на предприятиях энергетики, в ЖКХ, на промышленных объектах и в крупных IT-компаниях.</p>
+            <details>
+                <summary>Читать далее о направлении</summary>
+                <p>Студенты изучают электротехнику, электронику, автоматизацию, монтаж и эксплуатацию электрооборудования, возобновляемые источники энергии, программирование, разработку приложений, создание ИИ.</p>
+            </details>
+        </article>
+
+        <article id="sd5" itemscope itemtype="https://schema.org/EducationalOrganization">
+            <h2 itemprop="name">СП-5. Многофункциональный центр прикладных квалификаций</h2>
+            <p itemprop="description">Центр дополнительного профессионального образования, повышения квалификации и переподготовки кадров. Здесь можно получить новую профессию, повысить разряд или пройти курсы по современным прикладным направлениям.</p>
+            <details>
+                <summary>Читать далее о центре</summary>
+                <p>Мы предлагаем курсы по рабочим профессиям, программы переподготовки для взрослых, корпоративное обучение для предприятий и подготовку к демонстрационному экзамену.</p>
+            </details>
         </article>
     </main>
 
     <aside>
         <h3>Популярные направления</h3>
         <ul>
-            <li><a href="#france">Франция</a></li>
-            <li><a href="#japan">Япония</a></li>
-            <li><a href="#usa">США</a></li>
+            <li><a href="#sd3">Сфера услуг</a></li>
+            <li><a href="#sd4">Энергетика</a></li>
+            <li><a href="#sd5">Прикладные квалификации</a></li>
         </ul>
     </aside>
 
+    <!-- Форма подписки -->
     <section itemscope itemtype="https://schema.org/WebPageElement">
-        <h2 itemprop="name">Подписка на рассылку</h2>
+        <h2 itemprop="name">Подписка на новости колледжа</h2>
         <form itemprop="potentialAction" itemscope itemtype="https://schema.org/SubscribeAction">
             <label for="fname">Ваше имя:</label><br>
             <input type="text" id="fname" name="fname" value="Антон"><br>
             <label for="email">Ваша почта:</label><br>
-            <input type="text" id="lname" name="lname" value="antons.mail@example.com"><br><br>
+            <input type="email" id="email" name="email" value="antons.mail@example.com"><br><br>
             <input type="submit" value="Отправить">
         </form>
     </section>
 
+    <!-- Таблица направлений -->
     <section itemscope itemtype="https://schema.org/ItemList">
-        <h2 itemprop="name">Наши туры</h2>
+        <h2 itemprop="name">Направления подготовки</h2>
         <table>
             <thead>
                 <tr>
@@ -152,26 +281,42 @@
             </thead>
             <tbody>
                 <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                    <td itemprop="name">Европа</td>
-                    <td>7 дней</td>
+                    <td itemprop="name">Общеобразовательные дисциплины</td>
+                    <td>1 год</td>
                     <td>
                         <span itemprop="price" content="3500">3.500$</span>
                         <meta itemprop="priceCurrency" content="USD">
                     </td>
                 </tr>
                 <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                    <td itemprop="name">Азия</td>
-                    <td>7 дней</td>
+                    <td itemprop="name">Строительство и транспорт</td>
+                    <td>3 года</td>
                     <td>
                         <span itemprop="price" content="3000">3.000$</span>
                         <meta itemprop="priceCurrency" content="USD">
                     </td>
                 </tr>
                 <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
-                    <td itemprop="name">Америка</td>
-                    <td>7 дней</td>
+                    <td itemprop="name">Сфера услуг</td>
+                    <td>3 года</td>
                     <td>
                         <span itemprop="price" content="5000">5.000$</span>
+                        <meta itemprop="priceCurrency" content="USD">
+                    </td>
+                </tr>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Энергетика</td>
+                    <td>3 года</td>
+                    <td>
+                        <span itemprop="price" content="4500">4.500$</span>
+                        <meta itemprop="priceCurrency" content="USD">
+                    </td>
+                </tr>
+                <tr itemprop="itemListElement" itemscope itemtype="https://schema.org/Offer">
+                    <td itemprop="name">Прикладные квалификации</td>
+                    <td>от 3 месяцев</td>
+                    <td>
+                        <span itemprop="price" content="2000">2.000$</span>
                         <meta itemprop="priceCurrency" content="USD">
                     </td>
                 </tr>
@@ -180,7 +325,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Путешествия по миру. Все права защищены.</p>
+        <p>&copy; 2024 СПК. Все права защищены.</p>
         <nav>
             <a href="privacy">Политика конфиденциальности</a>
             <a href="terms">Условия использования</a>
