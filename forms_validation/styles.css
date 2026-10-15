@@ -10,12 +10,12 @@
 }
 
 .header h1 {
-    color: #2c3e50;
+    color: #2c5031;
     margin-bottom: 0.5rem;
 }
 
 .header p {
-    color: #7f8c8d;
+    color: #7f8d7f;
 }
 
 .registration-form {
@@ -35,7 +35,7 @@
 
 .form-section legend {
     font-weight: 600;
-    color: #2c3e50;
+    color: #2c5032;
 }
 
 .form-group {
@@ -47,7 +47,7 @@
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
-    color: #2c3e50;
+    color: #2f502c;
 }
 
 .form-group label.required::after {
@@ -67,7 +67,7 @@
 
 .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     outline: none;
-    border-color: #3498db;
+    border-color: #34db4d;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
@@ -76,7 +76,7 @@
 }
 
 .form-group input:valid:not(:focus) {
-    border-color: #2ecc71;
+    border-color: #2eccb4;
 }
 
 .error-message {
@@ -113,7 +113,7 @@
 }
 
 .radio-label input:checked + .radio-custom {
-    border-color: #3498db;
+    border-color: #34db4a;
     background: #3498db;
 }
 
@@ -130,8 +130,8 @@
 }
 
 .checkbox-label input:checked + .checkbox-custom {
-    border-color: #3498db;
-    background: #3498db;
+    border-color: #45db34;
+    background: #34db4d;
 }
 
 .checkbox-label input:checked + .checkbox-custom::after {
@@ -162,12 +162,12 @@
 }
 
 .btn-primary {
-    background: #3498db;
+    background: #34db45;
     color: white;
 }
 
 .btn-privary:hover {
-    background: #2980b9;
+    background: #29b930;
     transform: translateY(-1px);
 }
 
