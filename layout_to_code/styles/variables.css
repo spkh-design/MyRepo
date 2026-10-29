@@ -1,0 +1,58 @@
+:root {
+    /* Цвета */
+    --color-text-primary: #1B1A1A;
+    --color-text-secondary: #403E3B;
+    --color-text-muted: #645C55;
+    --color-text-light: #ECE7E4;
+    --color-white: #FFFFFF;
+    --color-black: #171717;
+    --color-bg-beige: #ECE7E4;
+    --color-bg-dark: #403E3B;
+    --color-bg-light: #F7F7F7;
+    --color-bg-accent: #CEC4BC;
+    --color-border: #CEC4BC;
+
+    /* Типографика */
+    --font-main: 'Poppins', Verdana, Tahoma, sans-serif;
+    --font-heading: 'Space Grotesk', sans-serif;
+
+    --fs-xs: 14px;
+    --fs-sm: 15px;
+    --fs-base: 16px;
+    --fs-md: 18px;
+    --fs-lg: 24px;
+    --fs-xl: 32px;
+    --fs-2xl: 39px;
+    --fs-3xl: 40px;
+    --fs-4xl: 64px;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+
+    /* Отступы */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 40px;
+    --space-xl: 60px;
+    --space-2xl: 100px;
+    --space-3xl: 120px;
+
+    /* Контейнер */
+    --container-max: 1440px;
+    --container-content: 1168px;
+    --container-padding: 100px;
+
+    /* Радиусы и переходы */
+    --radius-sm: 14px;
+    --radius-round: 50%;
+    --transition: 0.25s ease;
+
+    /* Брейкпоинты (справочно)
+       --bp-xl: 1440px
+       --bp-lg: 1200px
+       --bp-md: 992px
+       --bp-sm: 768px
+       --bp-xs: 576px
+    */
+}
